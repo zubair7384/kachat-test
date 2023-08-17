@@ -1,0 +1,63 @@
+body {
+  font-family: Vollkorn, serif;
+  margin: 2em;
+  color: #657b83;
+}
+
+h1 {
+  font-weight: 700;
+  color: #586e75;
+}
+
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 auto;
+  height: 90vh;
+}
+
+.main-container .title-img {
+  width: 180px;
+}
+.main-container > h1 {
+  color: #000000c4;
+}
+.main-container .app-bg-img-wrapper .app-bg-img {
+  width: 100%;
+}
+.main-container .app-bg-img-wrapper {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 270px;
+}
+.main-container .app-bg-img-wrapper .image-over {
+  position: absolute;
+}
+.main-container .app-bg-img-wrapper .chat-logo-img {
+  width: 123px;
+  right: 0;
+  top: 153px;
+}
+.main-container .app-bg-img-wrapper .plant-logo-img {
+  width: 120px;
+  left: 0;
+  bottom: 34px;
+}
+.main-container .app-btn {
+  width: 240px;
+  height: 48px;
+  background-color: #3a9cf5;
+  border: none;
+  border-radius: 8px;
+}
+.main-container .app-btn > a {
+  color: #fff;
+  list-style-type: none;
+  text-decoration: none;
+}
+.main-container > p {
+  cursor: pointer;
+}
