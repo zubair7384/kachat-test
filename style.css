@@ -1,6 +1,6 @@
 body {
   font-family: Vollkorn, serif;
-  margin: 2em;
+  margin: 0;
   color: #657b83;
 }
 
@@ -15,49 +15,38 @@ h1 {
   align-items: center;
   flex-direction: column;
   margin: 0 auto;
-  height: 90vh;
+  height: 100vh;
+  position: relative;
 }
 
-.main-container .title-img {
-  width: 180px;
+.main-container .bg-img {
+  width: 420px;
 }
-.main-container > h1 {
-  color: #000000c4;
-}
-.main-container .app-bg-img-wrapper .app-bg-img {
-  width: 100%;
-}
-.main-container .app-bg-img-wrapper {
+.main-container .btn-wrapper {
   display: flex;
-  justify-content: center;
-  position: relative;
-  width: 270px;
-}
-.main-container .app-bg-img-wrapper .image-over {
+  flex-direction: column;
+  align-items: center;
   position: absolute;
+  bottom: 60px;
 }
-.main-container .app-bg-img-wrapper .chat-logo-img {
-  width: 123px;
-  right: 0;
-  top: 153px;
-}
-.main-container .app-bg-img-wrapper .plant-logo-img {
-  width: 120px;
-  left: 0;
-  bottom: 34px;
-}
-.main-container .app-btn {
-  width: 240px;
-  height: 48px;
+.main-container .btn-wrapper .app-btn {
+  padding: 14px 100px;
+  border: 0;
   background-color: #3a9cf5;
-  border: none;
   border-radius: 8px;
-}
-.main-container .app-btn > a {
   color: #fff;
-  list-style-type: none;
-  text-decoration: none;
-}
-.main-container > p {
+  font-size: 18px;
   cursor: pointer;
+}
+.main-container .btn-wrapper > p {
+  color: #3a9cf5;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/* Media Query for screens with width less than 500px */
+@media (max-width: 500px) {
+  .main-container {
+    height: auto;
+  }
 }
