@@ -27,7 +27,7 @@ h1 {
   flex-direction: column;
   align-items: center;
   position: absolute;
-  bottom: 60px;
+  bottom: 10px;
 }
 .main-container .btn-wrapper .app-btn {
   padding: 14px 100px;
@@ -37,6 +37,10 @@ h1 {
   color: #fff;
   font-size: 18px;
   cursor: pointer;
+}
+.main-container .btn-wrapper .app-btn-download {
+  background-color: #01edb2;
+  margin-top: 10px;
 }
 .main-container .btn-wrapper > p {
   color: #3a9cf5;
