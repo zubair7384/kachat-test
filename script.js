@@ -1,22 +1,35 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // Check if the app is installed on the device
-  function isAppInstalled() {
-    // Assuming you have a way to detect if the app is installed
-    // This could involve checking user agent, using a deep link, or some other method
-    // Replace the condition below with your actual app detection logic
-    return true; // Change this based on your actual detection logic
-  }
+  var openAppBtn = document.querySelector(".app-btn");
+  var downloadAppBtn = document.querySelector(".app-btn-download");
+  var modalContainer = document.querySelector(".modal-container");
 
-  // Get the button and the text paragraph
-  const appButton = document.querySelector(".app-btn");
-  const buttonText = appButton.querySelector(".btn-text");
+  openAppBtn.addEventListener("click", function () {
+    var isMobile =
+      /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+        navigator.userAgent
+      );
 
-  // Check if the app is installed and update button text accordingly
-  if (isAppInstalled()) {
-    buttonText.textContent = "打开APP";
-    appButton.setAttribute("href", "kachat://opensplash/");
-  } else {
-    buttonText.textContent = "下载APP";
-    appButton.setAttribute("href", "link-to-download-app");
-  }
+    if (!isMobile) {
+      modalContainer.style.display = "flex";
+      setTimeout(function () {
+        modalContainer.style.display = "none";
+      }, 2000);
+    }
+  });
+
+  downloadAppBtn.addEventListener("click", function () {
+    var isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
+
+    if (isIOS) {
+      window.location.href =
+        "https://kwj5ad3.guhudesu.com/641mc8xrBijRYPvEzzHb4H";
+    } else {
+      window.location.href =
+        "https://5qvsz7n.huduxuyu.com/FxvGOeGsXn5wFDeX1dspPL";
+    }
+  });
+
+  document.querySelector(".close-btn").addEventListener("click", function () {
+    modalContainer.style.display = "none";
+  });
 });
