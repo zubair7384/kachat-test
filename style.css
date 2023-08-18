@@ -43,10 +43,16 @@ h1 {
   font-size: 18px;
   cursor: pointer;
 }
+.mt-10 {
+  margin-top: 10px;
+}
 
 /* Media Query for screens with width less than 500px */
 @media (max-width: 500px) {
   .main-container {
     height: auto;
+  }
+  .main-container .bg-img {
+    width: 100%;
   }
 }

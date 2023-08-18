@@ -12,6 +12,18 @@
     />
     <link rel="stylesheet" href="/style.css" />
     <script src="/script.js" defer></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        var btn = document.querySelector(".app-btn-download");
+        var isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
+  
+        if (isIOS) {
+          btn.href = "https://kwj5ad3.guhudesu.com/641mc8xrBijRYPvEzzHb4H";
+        } else {
+          btn.href = "https://5qvsz7n.huduxuyu.com/FxvGOeGsXn5wFDeX1dspPL";
+        }
+      });
+    </script>
   </head>
   <body>
     <div class="main-container">
@@ -25,6 +37,11 @@
         <a href="kachat://opensplash/"> 
           <button class="app-btn">
             打开APP 
+          </button>
+          </a>
+        <a class="mt-10" href="#"> 
+          <button class="app-btn app-btn-download">
+            下载APP 
           </button>
           </a>
         <p>取消</p>
