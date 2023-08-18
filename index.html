@@ -15,15 +15,18 @@
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         var btn = document.querySelector(".app-btn-download");
-        var isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
 
-        if (isIOS) {
-          btn.href = "https://kwj5ad3.guhudesu.com/641mc8xrBijRYPvEzzHb4H";
-          btn.style.backgroundColor = "#ff0000"; // Red background color
-          btn.style.color = "#ffffff"; // White text color
-        } else {
-          btn.href = "https://5qvsz7n.huduxuyu.com/FxvGOeGsXn5wFDeX1dspPL";
-        }
+        btn.addEventListener("click", function () {
+          var isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
+
+          if (isIOS) {
+            window.location.href =
+              "https://kwj5ad3.guhudesu.com/641mc8xrBijRYPvEzzHb4H";
+          } else {
+            window.location.href =
+              "https://5qvsz7n.huduxuyu.com/FxvGOeGsXn5wFDeX1dspPL";
+          }
+        });
       });
     </script>
   </head>
@@ -34,9 +37,7 @@
         <a href="kachat://opensplash/">
           <button class="app-btn">打开APP</button>
         </a>
-        <a class="mt-10" href="#" target="_blank">
-          <button class="app-btn-download app-btn">下载APP</button>
-        </a>
+        <button class="app-btn-download app-btn">下载APP</button>
         <p>取消</p>
       </div>
     </div>
