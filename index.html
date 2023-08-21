@@ -9,14 +9,144 @@
       href="https://fonts.googleapis.com/css?family=Vollkorn:400,400i,700,700i"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="/style.css" />
-    <script src="/script.js" defer></script>
+    <style>
+      body {
+  font-family: Vollkorn, serif;
+  margin: 0;
+  color: #657b83;
+}
+
+h1 {
+  font-weight: 700;
+  color: #586e75;
+}
+
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 auto;
+  height: 100vh;
+  position: relative;
+}
+
+.main-container .bg-img {
+  width: 420px;
+}
+.main-container .btn-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  bottom: 90px;
+}
+.main-container .btn-wrapper .app-btn {
+  padding: 12px 80px;
+  border: 0;
+  background-color: #3a9cf5;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+}
+.main-container .btn-wrapper .app-btn-download {
+  background-color: #000;
+  margin-top: 10px;
+}
+.main-container .btn-wrapper > p {
+  color: #3a9cf5;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.modal-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  background-color: black;
+  color: white;
+  padding: 5px 20px;
+  border-radius: 10px;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.mt-10 {
+  margin-top: 10px;
+}
+
+/* Media Query for screens with width less than 500px */
+@media (max-width: 500px) {
+  .main-container {
+    height: auto;
+  }
+  .main-container .bg-img {
+    width: 100%;
+  }
+}
+
+    </style>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+  var openAppBtn = document.querySelector(".app-btn");
+  var downloadAppBtn = document.querySelector(".app-btn-download");
+  var modalContainer = document.querySelector(".modal-container");
+
+  openAppBtn.addEventListener("click", function () {
+    var isMobile =
+      /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+        navigator.userAgent
+      );
+
+    if (!isMobile) {
+      modalContainer.style.display = "flex";
+      setTimeout(function () {
+        modalContainer.style.display = "none";
+      }, 2000);
+    }
+  });
+
+  downloadAppBtn.addEventListener("click", function () {
+    var isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
+
+    if (isIOS) {
+      window.location.href =
+        "https://kwj5ad3.guhudesu.com/641mc8xrBijRYPvEzzHb4H";
+    } else {
+      window.location.href =
+        "https://5qvsz7n.huduxuyu.com/FxvGOeGsXn5wFDeX1dspPL";
+    }
+  });
+
+  document.querySelector(".close-btn").addEventListener("click", function () {
+    modalContainer.style.display = "none";
+  });
+});
+
+    </script>
   </head>
   <body>
     <div class="main-container">
       <img class="bg-img" src="assets/appBg.png" type="image/" alt="logo" />
       <div class="btn-wrapper">
-        <a href="kachat://opensplash/">
+        <a href="kachatim://opensplash/">
           <button class="app-btn">打开APP</button>
         </a>
         <button class="app-btn-download app-btn">下载APP</button>
