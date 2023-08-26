@@ -156,6 +156,37 @@ h1 {
   });
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+      var openAppBtn = document.getElementById("openAppBtn");
+      var modalContainer = document.querySelector(".modal-container");
+
+      openAppBtn.addEventListener("click", function () {
+        // Attempt to open the app using a custom URL scheme
+        window.location.href = "kachatim://";
+
+        // If the app doesn't open, show the modal
+        setTimeout(function () {
+          modalContainer.style.display = "flex";
+          setTimeout(function () {
+            modalContainer.style.display = "none";
+          }, 2000);
+        }, 1000); // Adjust this timing as needed
+      });
+
+      // Show the appropriate button based on whether the app is installed
+      var isMobile =
+        /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+          navigator.userAgent
+        );
+      if (isMobile) {
+        openAppBtn.style.display = "block"; // Show the "Open App" button
+      } else {
+        openAppBtn.style.display = "none"; // Hide the "Open App" button
+        var downloadAppBtn = document.querySelector(".app-btn-download");
+        downloadAppBtn.style.display = "block"; // Show the "Download App" button
+      }
+    });
+
     </script>
   </head>
   <body>
@@ -164,6 +195,7 @@ h1 {
       <div class="btn-wrapper">
         <!-- <a href="kachatim://"> -->
           <button id="openAppBtn" class="app-btn">打开APP</button>
+          <button class="app-btn-download app-btn">下载APP</button>
         <!-- </a> -->
         <!-- <button class="app-btn-download app-btn">下载APP</button> -->
       </div>
